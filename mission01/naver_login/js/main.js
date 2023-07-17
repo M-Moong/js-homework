@@ -103,7 +103,7 @@ pw.addEventListener("input", () => {
 
 //# 로그인버튼 처리 이벤트
 submit.addEventListener("click", (event) => {
-  event.preventDefault();
+  event.preventDefault(); // 태그가 가지고 있는 고유한 능력을 죽인다.(submit)
 
   //* input값 비교
   comparison(email, pw);
