@@ -7,10 +7,11 @@
 // toggle
 // contains
 
+import { getNode } from "./getNode.js";
 
 //& 클래스를 추가하는 함수 (classList)
 //% add
-function addClass(node, className) {
+export function addClass(node, className) {
   if (typeof node === 'string') node = getNode(node);
 
   if (typeof className !== 'string') {
@@ -23,7 +24,7 @@ function addClass(node, className) {
 }
 
 //% remove
-function removeClass(node, className) {
+export function removeClass(node, className) {
 	if (typeof node === 'string') node = getNode(node);
 
 	if (!className) {
@@ -84,7 +85,7 @@ function getCss(node, prop) {
 }
 
 
-const css = (node, prop, value) => {
+export const css = (node, prop, value) => {
   return !value ? getCss(node, prop) : setCss(node, prop, value);
 };
 

@@ -1,5 +1,5 @@
 
-
+import { getNode } from "./getNode.js";
 
 //& 속성을 get 해주는 유틸함수
 function getAttr(node, prop) {
@@ -30,7 +30,7 @@ function setAttr(node, prop, value) {
 }
 
 //& 속성의 get과 set을 둘다 해주는 유틸함수
-function attr(node, prop, value) {
+export function attr(node, prop, value) {
   if (!value) {
     return getAttr(node, prop);
   } else {
