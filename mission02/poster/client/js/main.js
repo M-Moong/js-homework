@@ -16,15 +16,17 @@ const visualImage = getNode('.visual img')
 const nickName = getNode('h1')
 
 
-
-function setBgColor() {
+// 배경 바꾸는 함수
+function setBgColor() {	
 
 }
 
+// 이미지 바꾸는 함수
 function setImage() {
 
 }
 
+// 이름 바꾸는 함수
 function setNameText() {
 	
 }
