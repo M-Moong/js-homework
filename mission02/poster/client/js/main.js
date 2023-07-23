@@ -10,8 +10,7 @@
 */
 
 import { getNode, attr, css, removeClass, addClass } from '../lib/index.js';
-import { AudioPlayer } from './audio.js';
-import { data } from './data.js';
+import { AudioPlayer, data } from './index.js';
 
 
 //# 배경 바꾸는 함수
@@ -50,7 +49,7 @@ function setAudio(index) {
 	
 	if (playingAudio) {
     if (playingAudio.isPlaying()) {
-      playingAudio.stop();
+			playingAudio.stop();
     }
   }
 
@@ -84,8 +83,11 @@ function handleSlider(e) {
 
 }
 
-function start() {	
-	const nav = getNode('.nav')
+
+//% 시작함수
+function init() {	
+
+	const nav = getNode('.nav');
 
 	nav.addEventListener('click', handleSlider);
 	
@@ -93,7 +95,7 @@ function start() {
 	// 크롬 브라우저 자체에서 페이지 로드시 (오디오 or 비디오) autoplay를 막고 있습니다.
 	// 비디오는 mute상태로만 autoplay를 지원합니다.
 }
-start();
+init();
 
 
 

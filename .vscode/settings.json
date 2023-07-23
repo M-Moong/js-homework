@@ -1,0 +1,6 @@
+{
+	"editor.suggest.preview": true,
+	"emmet.useInlineCompletions": true,
+	"editor.suggest.matchOnWordStartOnly": true,
+	"editor.suggest.shareSuggestSelections": true
+}
